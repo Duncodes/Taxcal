@@ -11,7 +11,7 @@ public partial class MainWindow: Gtk.Window
 		var buffer = System.IO.File.ReadAllBytes ("./img/info.png");
 		var pixbuf = new Gdk.Pixbuf (buffer);
 		image.Pixbuf = pixbuf;
-		Help.Text="This is a simple Tax Calculator.Just Enter income and the vale of your tax is caculated.";
+		Help.Text="This is a simple Tax Calculator.Just Enter income and the value of your tax is caculated.";
 
 	}
 
