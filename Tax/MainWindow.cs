@@ -8,9 +8,10 @@ public partial class MainWindow: Gtk.Window
 
 		//onclick event for find object
 		find.Clicked += new EventHandler (OnButtonClicked);
-		var buffer = System.IO.File.ReadAllBytes ("./img/Tax.jpeg");
+		var buffer = System.IO.File.ReadAllBytes ("./img/info.png");
 		var pixbuf = new Gdk.Pixbuf (buffer);
 		image.Pixbuf = pixbuf;
+		Help.Text="This is a simple Tax Calculator.Just Enter income and the vale of your tax is caculated.";
 
 	}
 
@@ -30,8 +31,10 @@ public partial class MainWindow: Gtk.Window
 			GrossAmmout=float.Parse(data.Text);
 			TaxMethod tax = new  TaxMethod ();
 			TaxValue.Text = tax.procedure (GrossAmmout);
+			TaxValue1.Text="The Value of Tax is: ";
+
 		}catch(FormatException){
-			TaxValue.Text = data.Text +" is not a number.Try Numbers only";
+			TaxValue.Text ="The Value "+ data.Text +" is not a number.Try Numbers only";
 
 		}
 

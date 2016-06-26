@@ -9,15 +9,15 @@ public partial class MainWindow
 	
 	private global::Gtk.Button find;
 	
-	private global::Gtk.IconView iconview1;
+	private global::Gtk.Label Help;
 	
 	private global::Gtk.Image image;
 	
 	private global::Gtk.Label Label;
 	
-	private global::Gtk.Label label4;
-	
 	private global::Gtk.Label TaxValue;
+	
+	private global::Gtk.Label TaxValue1;
 
 	protected virtual void Build ()
 	{
@@ -58,15 +58,14 @@ public partial class MainWindow
 		w2.XOptions = ((global::Gtk.AttachOptions)(4));
 		w2.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
-		this.iconview1 = new global::Gtk.IconView ();
-		this.iconview1.CanFocus = true;
-		this.iconview1.Name = "iconview1";
-		this.table1.Add (this.iconview1);
-		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1 [this.iconview1]));
+		this.Help = new global::Gtk.Label ();
+		this.Help.Name = "Help";
+		this.table1.Add (this.Help);
+		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1 [this.Help]));
 		w3.TopAttach = ((uint)(2));
 		w3.BottomAttach = ((uint)(3));
-		w3.LeftAttach = ((uint)(2));
-		w3.RightAttach = ((uint)(3));
+		w3.LeftAttach = ((uint)(1));
+		w3.RightAttach = ((uint)(2));
 		w3.XOptions = ((global::Gtk.AttachOptions)(4));
 		w3.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
@@ -86,24 +85,23 @@ public partial class MainWindow
 		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1 [this.Label]));
 		w5.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
-		this.label4 = new global::Gtk.Label ();
-		this.label4.Name = "label4";
-		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString ("The Value of Tax is:");
-		this.table1.Add (this.label4);
-		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1 [this.label4]));
-		w6.TopAttach = ((uint)(1));
-		w6.BottomAttach = ((uint)(2));
-		w6.XOptions = ((global::Gtk.AttachOptions)(4));
-		w6.YOptions = ((global::Gtk.AttachOptions)(4));
-		// Container child table1.Gtk.Table+TableChild
 		this.TaxValue = new global::Gtk.Label ();
 		this.TaxValue.Name = "TaxValue";
 		this.table1.Add (this.TaxValue);
-		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxValue]));
+		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxValue]));
+		w6.TopAttach = ((uint)(1));
+		w6.BottomAttach = ((uint)(2));
+		w6.LeftAttach = ((uint)(1));
+		w6.RightAttach = ((uint)(2));
+		// Container child table1.Gtk.Table+TableChild
+		this.TaxValue1 = new global::Gtk.Label ();
+		this.TaxValue1.Name = "TaxValue1";
+		this.table1.Add (this.TaxValue1);
+		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxValue1]));
 		w7.TopAttach = ((uint)(1));
 		w7.BottomAttach = ((uint)(2));
-		w7.LeftAttach = ((uint)(1));
-		w7.RightAttach = ((uint)(2));
+		w7.XOptions = ((global::Gtk.AttachOptions)(4));
+		w7.YOptions = ((global::Gtk.AttachOptions)(4));
 		this.Add (this.table1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
