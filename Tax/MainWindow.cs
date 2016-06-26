@@ -45,14 +45,21 @@ public partial class MainWindow: Gtk.Window
 
 	protected virtual void OnButtonSaveClicked(object sender, System.EventArgs e)
 	{
-		StreamWriter sw = new StreamWriter(TaxPayerName.Text+".txt");
-		sw.Write(("The Tax Payable is "+TaxValue.Text).ToString());
-		TaxValue.Text = "Saved to file !";
-		sw.Close();
+		try{
+			int value=int.Parse(TaxValue.Text);
+			Console.WriteLine (value);
+
+			if (TaxPayerName.ToString() == "Tax payer name") {
+				TaxValue1.Text =  "You must Enter Tax Payer name";
+			}else{
+				StreamWriter sw = new StreamWriter (TaxPayerName.Text + ".txt");
+				sw.Write (("The Tax Payable is " + TaxValue.Text).ToString ());
+				TaxValue.Text = "Saved to file !";
+				TaxValue1.Text="Thank";
+				sw.Close ();
+			}
+		} catch(FormatException){
+			TaxValue.Text = "Tax Must be Computed First.";
+		}
 	}
 }
-
-	
-
-		
-

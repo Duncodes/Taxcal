@@ -101,7 +101,7 @@ public partial class MainWindow
 		w6.LeftAttach = ((uint)(2));
 		w6.RightAttach = ((uint)(3));
 		w6.XOptions = ((global::Gtk.AttachOptions)(4));
-		w6.YOptions = ((global::Gtk.AttachOptions)(4));
+		w6.YOptions = ((global::Gtk.AttachOptions)(0));
 		// Container child table1.Gtk.Table+TableChild
 		this.TaxPayerName = new global::Gtk.Entry ();
 		this.TaxPayerName.CanFocus = true;
