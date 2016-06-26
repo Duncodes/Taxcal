@@ -11,9 +11,9 @@ public partial class MainWindow
 	
 	private global::Gtk.IconView iconview1;
 	
-	private global::Gtk.Image image1;
+	private global::Gtk.Image image;
 	
-	private global::Gtk.Label label1;
+	private global::Gtk.Label Label;
 	
 	private global::Gtk.Label label4;
 	
@@ -50,7 +50,7 @@ public partial class MainWindow
 		this.find.Name = "find";
 		this.find.UseUnderline = true;
 		this.find.BorderWidth = ((uint)(78));
-		this.find.Label = global::Mono.Unix.Catalog.GetString ("Find");
+		this.find.Label = global::Mono.Unix.Catalog.GetString ("Find Tax");
 		this.table1.Add (this.find);
 		global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table1 [this.find]));
 		w2.LeftAttach = ((uint)(2));
@@ -70,28 +70,25 @@ public partial class MainWindow
 		w3.XOptions = ((global::Gtk.AttachOptions)(4));
 		w3.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
-		this.image1 = new global::Gtk.Image ();
-		this.image1.Name = "image1";
-		this.table1.Add (this.image1);
-		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1 [this.image1]));
+		this.image = new global::Gtk.Image ();
+		this.image.Name = "image";
+		this.table1.Add (this.image);
+		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1 [this.image]));
 		w4.TopAttach = ((uint)(2));
 		w4.BottomAttach = ((uint)(3));
 		w4.XOptions = ((global::Gtk.AttachOptions)(4));
 		w4.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
-		this.label1 = new global::Gtk.Label ();
-		this.label1.Name = "label1";
-		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Enter Income");
-		this.label1.Selectable = true;
-		this.label1.Angle = 30;
-		this.table1.Add (this.label1);
-		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1 [this.label1]));
-		w5.XOptions = ((global::Gtk.AttachOptions)(4));
+		this.Label = new global::Gtk.Label ();
+		this.Label.Name = "Label";
+		this.Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Enter You Income:");
+		this.table1.Add (this.Label);
+		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1 [this.Label]));
 		w5.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
 		this.label4 = new global::Gtk.Label ();
 		this.label4.Name = "label4";
-		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString ("The Value of Tax is");
+		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString ("The Value of Tax is:");
 		this.table1.Add (this.label4);
 		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1 [this.label4]));
 		w6.TopAttach = ((uint)(1));
@@ -111,7 +108,7 @@ public partial class MainWindow
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 879;
+		this.DefaultWidth = 941;
 		this.DefaultHeight = 405;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
