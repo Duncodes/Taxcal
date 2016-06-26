@@ -12,7 +12,7 @@ public partial class MainWindow: Gtk.Window
 		var buffer = System.IO.File.ReadAllBytes ("./img/info.png");
 		var pixbuf = new Gdk.Pixbuf (buffer);
 		image.Pixbuf = pixbuf;
-		Help.Text="This is a simple Tax Calculator.Just Enter income and the value of your tax is caculated.";
+		Help.Text="This is a simple Tax Calculator.Just Enter income and the value of your tax is caculated.Then you can save it in cvs file";
 		save1.Clicked += new EventHandler (OnButtonSaveClicked);
 
 	}
@@ -46,14 +46,16 @@ public partial class MainWindow: Gtk.Window
 	protected virtual void OnButtonSaveClicked(object sender, System.EventArgs e)
 	{
 		try{
-			int value=int.Parse(TaxValue.Text);
+			float value=float.Parse(TaxValue.Text);
 			Console.WriteLine (value);
 
-			if (TaxPayerName.ToString() == "Tax payer name") {
+			if ((TaxPayerName.Text).ToString() == "Enter Tax Payer Name.") {
 				TaxValue1.Text =  "You must Enter Tax Payer name";
+				TaxValue.Text="Please Enter Valid Name.";
 			}else{
-				StreamWriter sw = new StreamWriter (TaxPayerName.Text + ".txt");
-				sw.Write (("The Tax Payable is " + TaxValue.Text).ToString ());
+				Console.WriteLine(TaxPayerName.ToString());
+				StreamWriter sw = new StreamWriter ("./DataFiles/"+TaxPayerName.Text + ".txt");
+				sw.Write (("Name,Tax\n"+TaxPayerName.Text.ToString() +","+ TaxValue.Text).ToString ());
 				TaxValue.Text = "Saved to file !";
 				TaxValue1.Text="Thank";
 				sw.Close ();

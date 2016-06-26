@@ -147,7 +147,7 @@
           <widget class="Gtk.Entry" id="TaxPayerName">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
-            <property name="Text" translatable="yes">Tax payer name</property>
+            <property name="Text" translatable="yes">Enter Tax Payer Name.</property>
             <property name="IsEditable">True</property>
             <property name="InvisibleChar">•</property>
           </widget>

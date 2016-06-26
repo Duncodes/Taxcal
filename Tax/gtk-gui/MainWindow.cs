@@ -106,7 +106,7 @@ public partial class MainWindow
 		this.TaxPayerName = new global::Gtk.Entry ();
 		this.TaxPayerName.CanFocus = true;
 		this.TaxPayerName.Name = "TaxPayerName";
-		this.TaxPayerName.Text = global::Mono.Unix.Catalog.GetString ("Tax payer name");
+		this.TaxPayerName.Text = global::Mono.Unix.Catalog.GetString ("Enter Tax Payer Name.");
 		this.TaxPayerName.IsEditable = true;
 		this.TaxPayerName.InvisibleChar = '•';
 		this.table1.Add (this.TaxPayerName);
