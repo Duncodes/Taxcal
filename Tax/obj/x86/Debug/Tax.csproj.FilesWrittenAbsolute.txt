@@ -1,0 +1,7 @@
+/media/duncan/LINUX FILES/wim/Tax/Tax/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/media/duncan/LINUX FILES/wim/Tax/Tax/obj/x86/Debug/Tax.gtk-gui.gui.stetic
+/media/duncan/LINUX FILES/wim/Tax/Tax/bin/Debug/Tax.exe.mdb
+/media/duncan/LINUX FILES/wim/Tax/Tax/bin/Debug/Tax.exe
+/media/duncan/LINUX FILES/wim/Tax/Tax/obj/x86/Debug/Tax.exe
+/media/duncan/LINUX FILES/wim/Tax/Tax/obj/x86/Debug/Tax.exe.mdb
+/media/duncan/LINUX FILES/wim/Tax/Tax/bin/Debug/libstetic.dll

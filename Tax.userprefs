@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Tax/Tax.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tax/MainWindow.cs">
+    <Files>
+      <File FileName="Tax/Program.cs" Line="10" Column="16" />
+      <File FileName="Tax/MainWindow.cs" Line="16" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
