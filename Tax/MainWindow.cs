@@ -8,7 +8,7 @@ public partial class MainWindow: Gtk.Window
 		Build ();
 
 		//onclick event for find object
-		find.Clicked += new EventHandler (OnButtonClicked);
+		find.Clicked += new EventHandler (OnButtonFindClicked);
 		var buffer = System.IO.File.ReadAllBytes ("./img/info.png");
 		var pixbuf = new Gdk.Pixbuf (buffer);
 		image.Pixbuf = pixbuf;
@@ -27,7 +27,7 @@ public partial class MainWindow: Gtk.Window
 
 
 	//onclick handler
-	void OnButtonClicked (object obj, EventArgs args){
+	void OnButtonFindClicked (object obj, EventArgs args){
 		float GrossAmmout=0;
 		try{
 			GrossAmmout=float.Parse(data.Text);
@@ -43,7 +43,7 @@ public partial class MainWindow: Gtk.Window
 	}
 
 
-	protected virtual void OnButtonSaveClicked(object sender, System.EventArgs e)
+	void OnButtonSaveClicked(object sender, System.EventArgs e)
 	{
 		try{
 			float value=float.Parse(TaxValue.Text);
