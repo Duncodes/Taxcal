@@ -15,6 +15,10 @@ public partial class MainWindow
 	
 	private global::Gtk.Label Label;
 	
+	private global::Gtk.Button save1;
+	
+	private global::Gtk.Entry TaxPayerName;
+	
 	private global::Gtk.Label TaxValue;
 	
 	private global::Gtk.Label TaxValue1;
@@ -85,23 +89,52 @@ public partial class MainWindow
 		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1 [this.Label]));
 		w5.YOptions = ((global::Gtk.AttachOptions)(4));
 		// Container child table1.Gtk.Table+TableChild
+		this.save1 = new global::Gtk.Button ();
+		this.save1.CanFocus = true;
+		this.save1.Name = "save1";
+		this.save1.UseUnderline = true;
+		this.save1.Label = global::Mono.Unix.Catalog.GetString ("Save");
+		this.table1.Add (this.save1);
+		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1 [this.save1]));
+		w6.TopAttach = ((uint)(2));
+		w6.BottomAttach = ((uint)(3));
+		w6.LeftAttach = ((uint)(2));
+		w6.RightAttach = ((uint)(3));
+		w6.XOptions = ((global::Gtk.AttachOptions)(4));
+		w6.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table1.Gtk.Table+TableChild
+		this.TaxPayerName = new global::Gtk.Entry ();
+		this.TaxPayerName.CanFocus = true;
+		this.TaxPayerName.Name = "TaxPayerName";
+		this.TaxPayerName.Text = global::Mono.Unix.Catalog.GetString ("Tax payer name");
+		this.TaxPayerName.IsEditable = true;
+		this.TaxPayerName.InvisibleChar = '•';
+		this.table1.Add (this.TaxPayerName);
+		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxPayerName]));
+		w7.TopAttach = ((uint)(1));
+		w7.BottomAttach = ((uint)(2));
+		w7.LeftAttach = ((uint)(2));
+		w7.RightAttach = ((uint)(3));
+		w7.XOptions = ((global::Gtk.AttachOptions)(4));
+		w7.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table1.Gtk.Table+TableChild
 		this.TaxValue = new global::Gtk.Label ();
 		this.TaxValue.Name = "TaxValue";
 		this.table1.Add (this.TaxValue);
-		global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxValue]));
-		w6.TopAttach = ((uint)(1));
-		w6.BottomAttach = ((uint)(2));
-		w6.LeftAttach = ((uint)(1));
-		w6.RightAttach = ((uint)(2));
+		global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxValue]));
+		w8.TopAttach = ((uint)(1));
+		w8.BottomAttach = ((uint)(2));
+		w8.LeftAttach = ((uint)(1));
+		w8.RightAttach = ((uint)(2));
 		// Container child table1.Gtk.Table+TableChild
 		this.TaxValue1 = new global::Gtk.Label ();
 		this.TaxValue1.Name = "TaxValue1";
 		this.table1.Add (this.TaxValue1);
-		global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxValue1]));
-		w7.TopAttach = ((uint)(1));
-		w7.BottomAttach = ((uint)(2));
-		w7.XOptions = ((global::Gtk.AttachOptions)(4));
-		w7.YOptions = ((global::Gtk.AttachOptions)(4));
+		global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table1 [this.TaxValue1]));
+		w9.TopAttach = ((uint)(1));
+		w9.BottomAttach = ((uint)(2));
+		w9.XOptions = ((global::Gtk.AttachOptions)(4));
+		w9.YOptions = ((global::Gtk.AttachOptions)(4));
 		this.Add (this.table1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();

@@ -1,5 +1,6 @@
 ﻿using System;
 using Gtk;
+using System.IO;
 using Tax;
 public partial class MainWindow: Gtk.Window
 {
@@ -12,6 +13,7 @@ public partial class MainWindow: Gtk.Window
 		var pixbuf = new Gdk.Pixbuf (buffer);
 		image.Pixbuf = pixbuf;
 		Help.Text="This is a simple Tax Calculator.Just Enter income and the value of your tax is caculated.";
+		save1.Clicked += new EventHandler (OnButtonSaveClicked);
 
 	}
 
@@ -38,6 +40,15 @@ public partial class MainWindow: Gtk.Window
 
 		}
 
+	}
+
+
+	protected virtual void OnButtonSaveClicked(object sender, System.EventArgs e)
+	{
+		StreamWriter sw = new StreamWriter(TaxPayerName.Text+".txt");
+		sw.Write(("The Tax Payable is "+TaxValue.Text).ToString());
+		TaxValue.Text = "Saved to file !";
+		sw.Close();
 	}
 }
 
