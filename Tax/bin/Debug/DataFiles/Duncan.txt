@@ -1,2 +1,2 @@
-Duncan
-8789.3
+Name,Tax
+Duncan,1016

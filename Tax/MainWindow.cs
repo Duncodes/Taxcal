@@ -12,7 +12,7 @@ public partial class MainWindow: Gtk.Window
 		var buffer = System.IO.File.ReadAllBytes ("./img/info.png");
 		var pixbuf = new Gdk.Pixbuf (buffer);
 		image.Pixbuf = pixbuf;
-		Help.Text="This is a simple Tax Calculator.Just Enter income and the value of your tax is caculated.Then you can save it in cvs file";
+		Help.Text="This is a simple Tax Calculator.\nJust Enter income and the value of \nyour tax is caculated and then you \n can save it in cvs file(comman separated\nvalues";
 		save1.Clicked += new EventHandler (OnButtonSaveClicked);
 
 	}
@@ -26,7 +26,7 @@ public partial class MainWindow: Gtk.Window
 	}
 
 
-	//onclick handler
+	//onclick  find tax Handler handler
 	void OnButtonFindClicked (object obj, EventArgs args){
 		float GrossAmmout=0;
 		try{
@@ -37,9 +37,11 @@ public partial class MainWindow: Gtk.Window
 
 		}catch(FormatException){
 			TaxValue.Text ="The Value "+ data.Text +" is not a number.Try Numbers only";
-
+			TaxValue1.Text="Error";
+		}catch(OverflowException e){
+			TaxValue.Text = "Unreasonable salary ammount please enter your actual salary";
+			Console.WriteLine (e.StackTrace);
 		}
-
 	}
 
 
@@ -53,11 +55,11 @@ public partial class MainWindow: Gtk.Window
 				TaxValue1.Text =  "You must Enter Tax Payer name";
 				TaxValue.Text="Please Enter Valid Name.";
 			}else{
-				Console.WriteLine(TaxPayerName.ToString());
-				StreamWriter sw = new StreamWriter ("./DataFiles/"+TaxPayerName.Text + ".txt");
+				Console.WriteLine(TaxPayerName.Text.ToString());
+				StreamWriter sw = new StreamWriter ("./DataFiles/"+TaxPayerName.Text + ".csv");
 				sw.Write (("Name,Tax\n"+TaxPayerName.Text.ToString() +","+ TaxValue.Text).ToString ());
-				TaxValue.Text = "Saved to file !";
-				TaxValue1.Text="Thank";
+				TaxValue.Text = "Saved to" +TaxPayerName.Text.ToString()+".csv.!";
+				TaxValue1.Text="Thanks";
 				sw.Close ();
 			}
 		} catch(FormatException){

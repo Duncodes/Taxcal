@@ -87,7 +87,7 @@ public partial class MainWindow
 		this.Label.LabelProp = global::Mono.Unix.Catalog.GetString ("Enter You Income:");
 		this.table1.Add (this.Label);
 		global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1 [this.Label]));
-		w5.YOptions = ((global::Gtk.AttachOptions)(4));
+		w5.XOptions = ((global::Gtk.AttachOptions)(1));
 		// Container child table1.Gtk.Table+TableChild
 		this.save1 = new global::Gtk.Button ();
 		this.save1.CanFocus = true;
